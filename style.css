@@ -7,140 +7,152 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
+    background: linear-gradient(to right, #8e44ad, #3498db);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    color: #fff;
 }
 
 .container {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.95);
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    max-width: 500px; /* Ampliando o tamanho máximo do container */
     width: 100%;
+    backdrop-filter: blur(10px);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Alterei o mínimo para 220px, criando mais espaço */
+    gap: 20px; /* Aumentei o gap entre os itens */
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #333;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+    
+h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    color: #2c3e50;
+    font-weight: bold;
 }
 
 button {
     font-size: 1.2rem;
-    margin: 10px;
-    padding: 12px 20px;
+    padding: 14px 22px;
     border: none;
     cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    width: 100%;
-    max-width: 200px;
-    display: block;
-    margin: 10px auto;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    width: 100%; 
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 button:focus {
     outline: 2px solid rgba(0, 0, 0, 0.2);
 }
 
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
 .start {
-    background: #28a745;
+    background: #2ecc71;
     color: white;
 }
 .start:hover {
-    background: #218838;
-    transform: scale(1.05);
+    background: #27ae60;
 }
 
 .pause {
-    background: #ffc107;
+    background: #f39c12;
+    color: white;
 }
 .pause:hover {
-    background: #e0a800;
-    transform: scale(1.05);
+    background: #e67e22;
 }
 
 .reset {
-    background: #dc3545;
+    background: #e74c3c;
     color: white;
 }
 .reset:hover {
-    background: #c82333;
-    transform: scale(1.05);
+    background: #c0392b;
 }
 
 .resume {
-    background: #17a2b8;
+    background: #1abc9c;
     color: white;
 }
 .resume:hover {
-    background: #138496;
-    transform: scale(1.05);
+    background: #16a085;
 }
 
 .rewind {
-    background: #6f42c1;
+    background: #9b59b6;
     color: white;
 }
 .rewind:hover {
-    background: #5936a6;
-    transform: scale(1.05);
+    background: #8e44ad;
 }
 
 .forward {
-    background: #fd7e14;
+    background: #f39c12;
     color: white;
 }
 .forward:hover {
-    background: #e8590c;
-    transform: scale(1.05);
+    background: #e67e22;
 }
 
 .save {
-    background: #007bff;
+    background: #2980b9;
     color: white;
 }
 .save:hover {
-    background: #0056b3;
-    transform: scale(1.05);
+    background: #1f6392;
 }
 
 .clear {
-    background: #6c757d;
+    background: #7f8c8d;
     color: white;
 }
 .clear:hover {
-    background: #5a6268;
-    transform: scale(1.05);
-}
-
-h2 {
-    font-size: 1.4rem;
-    margin-top: 2rem;
-    color: #333;
+    background: #95a5a6;
 }
 
 #saved-times {
     list-style: none;
     padding: 0;
-    margin-top: 1rem;
-    max-height: 150px;
+    margin-top: 1.5rem;
+    max-height: 200px;
     overflow-y: auto;
 }
 
 #saved-times li {
-    background-color: #f8f9fa;
-    border: 1px solid #ddd;
-    padding: 8px;
-    margin: 5px auto;
-    border-radius: 6px;
-    max-width: 200px;
-    color: #333;
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    padding: 10px;
+    margin: 8px auto;
+    border-radius: 8px;
+    max-width: 230px;
+    color: #2c3e50;
+    transition: all 0.2s ease;
 }
+
+#saved-times li:hover {
+    background-color: #bdc3c7;
+    transform: translateX(5px);
+}
+
+
