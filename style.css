@@ -75,3 +75,72 @@ button:focus {
     background: #c82333;
     transform: scale(1.05);
 }
+
+.resume {
+    background: #17a2b8;
+    color: white;
+}
+.resume:hover {
+    background: #138496;
+    transform: scale(1.05);
+}
+
+.rewind {
+    background: #6f42c1;
+    color: white;
+}
+.rewind:hover {
+    background: #5936a6;
+    transform: scale(1.05);
+}
+
+.forward {
+    background: #fd7e14;
+    color: white;
+}
+.forward:hover {
+    background: #e8590c;
+    transform: scale(1.05);
+}
+
+.save {
+    background: #007bff;
+    color: white;
+}
+.save:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.clear {
+    background: #6c757d;
+    color: white;
+}
+.clear:hover {
+    background: #5a6268;
+    transform: scale(1.05);
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    color: #333;
+}
+
+#saved-times {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+#saved-times li {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 8px;
+    margin: 5px auto;
+    border-radius: 6px;
+    max-width: 200px;
+    color: #333;
+}
