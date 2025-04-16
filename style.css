@@ -9,53 +9,55 @@
 body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    background: linear-gradient(to right, #8e44ad, #3498db);
+    background: linear-gradient(120deg, #8e44ad, #3498db);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
     color: #fff;
+    transition: background 0.5s ease;
 }
 
 .container {
     background: rgba(255, 255, 255, 0.95);
     padding: 2rem;
     border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    max-width: 500px; /* Ampliando o tamanho máximo do container */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    max-width: 600px;
     width: 100%;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Alterei o mínimo para 220px, criando mais espaço */
-    gap: 20px; /* Aumentei o gap entre os itens */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    transition: box-shadow 0.3s ease;
 }
 
 h1 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
     color: #2c3e50;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 900;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
     
 h2 {
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    color: #2c3e50;
-    font-weight: bold;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    color: #34495e;
+    font-weight: 700;
 }
 
 button {
-    font-size: 1.2rem;
-    padding: 14px 22px;
+    font-size: 1.1rem;
+    padding: 12px 20px;
     border: none;
     cursor: pointer;
     border-radius: 12px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
     width: 100%; 
-    font-weight: bold;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
 }
 
 button:focus {
@@ -63,73 +65,28 @@ button:focus {
 }
 
 button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.start {
-    background: #2ecc71;
-    color: white;
-}
-.start:hover {
-    background: #27ae60;
-}
+/* Paleta pastéis com boa leitura e contraste */
+.start    { background: #d9b3ff; color: #fff; text-shadow: 0 1px 2px #000; }
+.pause    { background: #c6b5ff; color: #fff; text-shadow: 0 1px 2px #000; }
+.reset    { background: #a5b8ff; color: #fff; text-shadow: 0 1px 2px #000; }
+.resume   { background: #91cbff; color: #fff; text-shadow: 0 1px 2px #000; }
+.rewind   { background: #73b5ff; color: #fff; text-shadow: 0 1px 2px #000; }
+.forward  { background: #5199ff; color: #fff; text-shadow: 0 1px 2px #000; }
+.save     { background: #3d7aff; color: #fff; text-shadow: 0 1px 2px #000; }
+.clear    { background: #2f5aa0; color: #fff; text-shadow: 0 1px 2px #000; }
 
-.pause {
-    background: #f39c12;
-    color: white;
-}
-.pause:hover {
-    background: #e67e22;
-}
-
-.reset {
-    background: #e74c3c;
-    color: white;
-}
-.reset:hover {
-    background: #c0392b;
-}
-
-.resume {
-    background: #1abc9c;
-    color: white;
-}
-.resume:hover {
-    background: #16a085;
-}
-
-.rewind {
-    background: #9b59b6;
-    color: white;
-}
-.rewind:hover {
-    background: #8e44ad;
-}
-
-.forward {
-    background: #f39c12;
-    color: white;
-}
-.forward:hover {
-    background: #e67e22;
-}
-
-.save {
-    background: #2980b9;
-    color: white;
-}
-.save:hover {
-    background: #1f6392;
-}
-
-.clear {
-    background: #7f8c8d;
-    color: white;
-}
-.clear:hover {
-    background: #95a5a6;
-}
+.start:hover    { background: #e9ceff; }
+.pause:hover    { background: #d8ccff; }
+.reset:hover    { background: #bdcaff; }
+.resume:hover   { background: #aad9ff; }
+.rewind:hover   { background: #91cbff; }
+.forward:hover  { background: #6eaaff; }
+.save:hover     { background: #5e91ff; }
+.clear:hover    { background: #3f6bbd; }
 
 #saved-times {
     list-style: none;
@@ -137,22 +94,29 @@ button:hover {
     margin-top: 1.5rem;
     max-height: 200px;
     overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #aaa #f0f0f0;
 }
 
 #saved-times li {
-    background-color: #ecf0f1;
-    border: 1px solid #bdc3c7;
+    background-color: #f4f6f8;
+    border: 1px solid #d1d8e0;
     padding: 10px;
     margin: 8px auto;
-    border-radius: 8px;
-    max-width: 230px;
+    border-radius: 10px;
+    max-width: 240px;
     color: #2c3e50;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 #saved-times li:hover {
-    background-color: #bdc3c7;
-    transform: translateX(5px);
+    background-color: #dfe6ec;
+    transform: translateX(6px);
 }
+
+
+
+
+
 
 
